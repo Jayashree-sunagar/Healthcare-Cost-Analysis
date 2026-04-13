@@ -1,0 +1,26 @@
+SQL queries:
+## Healthcare Cost Analysis
+-------------------------------------------------------------
+
+
+
+1.Retrieve patients with the highest medical charges
+SELECT * FROM medical_cost ORDER BY Charges DESC LIMIT 5;
+
+2.Calculate average healthcare cost by region
+SELECT Region, AVG(Charges) AS Avg_Cost FROM medical_cost GROUP BY Region;
+
+3.Count number of patients by gender
+SELECT Region, AVG(Charges) AS Avg_Cost FROM medical_cost GROUP BY Region;
+
+4.Find maximum and minimum charges
+SELECT 
+    MAX(Charges) AS Maximum_Charges,
+    MIN(Charges) AS Minimum_Charges
+FROM medical_cost;
+
+5.Group healthcare costs by smoking status
+SELECT Smoker, AVG(Charges) AS Avg_Cost FROM medical_cost GROUP BY Smoker;
+
+6.Analyze average BMI and charges relationship
+SELECT BMI, AVG(Charges) AS Avg_Charges FROM medical_cost GROUP BY BMI ORDER BY BMI;
